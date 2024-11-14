@@ -60,19 +60,25 @@
             list-style-type: none;
             padding-left: 0;
         }
-        .skills li, .reference p {
-            margin-bottom: 5px;
+        .skills ul {
+            width: 100%;
+        }
+        .skills li {
+            margin-bottom: 15px;
+            color: white;
+            font-size: 0.9em;
         }
         .line {
             background-color: #555;
-            height: 5px;
+            height: 10px;
             width: 100%;
             border-radius: 5px;
-            margin-bottom: 10px;
+            margin-top: 5px;
+            overflow: hidden;
         }
         .bar {
             background-color: #eee;
-            height: 5px;
+            height: 100%;
             border-radius: 5px;
         }
         .photoshop { width: 80%; }
@@ -135,10 +141,18 @@
             <div class="section">
                 <div class="section-title">SKILLS</div>
                 <ul class="skills">
-                    <li>Photoshop <div class="line"><div class="bar photoshop"></div></div></li>
-                    <li>JavaScript <div class="line"><div class="bar javascript"></div></div></li>
-                    <li>HTML <div class="line"><div class="bar html"></div></div></li>
-                    <li>CSS <div class="line"><div class="bar css"></div></div></li>
+                    <li>Photoshop
+                        <div class="line"><div class="bar photoshop"></div></div>
+                    </li>
+                    <li>JavaScript
+                        <div class="line"><div class="bar javascript"></div></div>
+                    </li>
+                    <li>HTML
+                        <div class="line"><div class="bar html"></div></div>
+                    </li>
+                    <li>CSS
+                        <div class="line"><div class="bar css"></div></div>
+                    </li>
                 </ul>
             </div>
             <div class="section">
