@@ -14,8 +14,10 @@
         body {
             display: flex;
             justify-content: center;
+            align-items: center;
             padding: 20px;
             background-color: #f0f0f0;
+            min-height: 100vh;
         }
         .container {
             display: flex;
@@ -31,28 +33,16 @@
             width: 40%;
             background-color: #333;
             color: white;
-            text-align: center;
-        }
-        .profile-picture {
-            width: 100%;
-            max-width: 800px;
-            height: 800px;
-            margin: 0 auto 20px;
-            background-image: url('anhdaidien.jpg');
-            background-size: cover;
-            background-position: center;
-            border-radius: 50%;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
         }
         .right {
             width: 60%;
         }
         h1 {
-            font-size: 24px;
+            font-size: 2em;
             margin-bottom: 10px;
         }
         h2 {
-            font-size: 18px;
+            font-size: 1.5em;
             color: #333;
             margin-bottom: 10px;
         }
@@ -88,7 +78,19 @@
             height: 5px;
         }
 
-        /* Responsive Styles */
+        /* Responsive Styles for Desktop (16:9) and Mobile (9:19) */
+        @media (max-width: 1024px) {
+            .container {
+                width: 90%;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 1.3em;
+            }
+        }
+
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
@@ -98,18 +100,14 @@
                 width: 100%;
             }
             h1 {
-                font-size: 20px;
+                font-size: 1.6em;
             }
             h2 {
-                font-size: 16px;
+                font-size: 1.2em;
             }
             .skills li {
                 flex-direction: column;
                 align-items: flex-start;
-            }
-            .profile-picture {
-                height: 400px;
-                width: 400px;
             }
         }
 
@@ -122,14 +120,17 @@
                 box-shadow: none;
             }
             h1 {
-                font-size: 18px;
+                font-size: 1.4em;
             }
             h2 {
-                font-size: 14px;
+                font-size: 1em;
             }
-            .profile-picture {
-                height: 200px;
-                width: 200px;
+            .left, .right {
+                padding: 15px;
+            }
+            .skills li {
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
     </style>
@@ -137,7 +138,6 @@
 <body>
     <div class="container">
         <div class="left">
-            <div class="profile-picture"></div>
             <div class="about">
                 <h1>About Me</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est itaque dicta dolor quam aliquam optio illo, quib.</p>
@@ -180,4 +180,11 @@
             <div class="experience">
                 <h2>Experience</h2>
                 <p>2014-2016 Lorem ipsum dolor sit amet consectetur.</p>
-            
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <p>2013-2014 Lorem ipsum dolor sit amet consectetur.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
