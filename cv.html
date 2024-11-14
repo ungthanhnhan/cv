@@ -20,67 +20,50 @@
             min-height: 100vh;
         }
         .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             width: 70%;
-            max-width: 1200px;
+            max-width: 800px;
             background-color: #ffffff;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
             border-radius: 20px;
-        }
-        .content {
-            display: flex;
-            width: 100%;
-        }
-        .left, .right {
-            padding: 20px;
-        }
-        .left {
-            width: 40%;
-            background-color: #333;
-            color: white;
-            text-align: center;
-            border-radius: 0 0 20px 20px;
+            overflow: hidden;
         }
         .profile-section {
-            background-color: #ccc;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 20px 20px 0 0;
-            width: 100%;
+            background-color: #333;
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
         }
         .profile-picture {
-            width: 100%;
-            max-width: 350px;
-            height: 350px;
+            width: 200px;
+            height: 200px;
             background-image: url('anhdaidien.jpg');
             background-size: cover;
             background-position: center;
             border-radius: 50%;
+            margin: 0 auto 20px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
         }
-        .right {
-            width: 60%;
-        }
         h1 {
-            font-size: 2em;
+            font-size: 1.8em;
             margin-bottom: 10px;
+            color: white;
+        }
+        .content {
+            padding: 20px;
         }
         h2 {
             font-size: 1.5em;
             color: #333;
             margin-bottom: 10px;
+            text-align: center;
         }
         p, ul, li {
             margin-bottom: 10px;
             line-height: 1.6;
+            text-align: center;
         }
-        .about, .contact, .skills, .reference {
-            margin-bottom: 20px;
+        .skills {
+            margin-top: 20px;
         }
         .skills ul {
             list-style: none;
@@ -90,47 +73,44 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
-        .skills li div {
-            width: 70%;
-        }
-        .experience, .education {
-            margin-bottom: 20px;
+        .skills li span {
+            flex-basis: 30%;
+            text-align: left;
         }
         .line {
             background-color: #555;
             height: 5px;
             width: 100%;
             border-radius: 5px;
-            margin-bottom: 10px;
         }
         .bar {
             background-color: #eee;
             border-radius: 5px;
             height: 5px;
         }
+        .bar.photoshop { width: 80%; }
+        .bar.javascript { width: 70%; }
+        .bar.html { width: 90%; }
+        .bar.css { width: 85%; }
+
         @media (max-width: 768px) {
             .container {
                 width: 90%;
             }
-            .content {
-                flex-direction: column;
-            }
-            .left, .right {
-                width: 100%;
+            .profile-picture {
+                width: 150px;
+                height: 150px;
             }
             h1 {
                 font-size: 1.6em;
             }
             h2 {
-                font-size: 1.2em;
-            }
-            .profile-picture {
-                height: 250px;
-                width: 250px;
+                font-size: 1.3em;
             }
         }
+
         @media (max-width: 480px) {
             body {
                 padding: 10px;
@@ -143,22 +123,19 @@
                 font-size: 1.4em;
             }
             h2 {
-                font-size: 1em;
+                font-size: 1.1em;
             }
             .profile-picture {
-                height: 200px;
-                width: 200px;
-            }
-            .left, .right {
-                padding: 15px;
+                width: 120px;
+                height: 120px;
             }
             .skills li {
                 flex-direction: column;
                 align-items: flex-start;
             }
-            .skills li div {
-                width: 100%;
-                margin-top: 5px;
+            .skills li span {
+                flex-basis: 100%;
+                margin-bottom: 5px;
             }
         }
     </style>
@@ -167,55 +144,41 @@
     <div class="container">
         <div class="profile-section">
             <div class="profile-picture"></div>
+            <h1>About Me</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est itaque dicta dolor quam aliquam optio illo, quib.</p>
+            <p>Address: Lorem ipsum dolor sit amet.</p>
+            <p>Phone: 0123456789</p>
+            <p>Email: demo@gmail.com</p>
         </div>
         <div class="content">
-            <div class="left">
-                <div class="about">
-                    <h1>About Me</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est itaque dicta dolor quam aliquam optio illo, quib.</p>
-                </div>
-                <div class="contact">
-                    <h2>Contact Us</h2>
-                    <p>Address: Lorem ipsum dolor sit amet.</p>
-                    <p>Phone: 0123456789</p>
-                    <p>Email: demo@gmail.com</p>
-                </div>
-                <div class="skills">
-                    <h2>Skills</h2>
-                    <ul>
-                        <li>Photoshop <div class="line"><div class="bar" style="width: 80%;"></div></div></li>
-                        <li>JavaScript <div class="line"><div class="bar" style="width: 70%;"></div></div></li>
-                        <li>HTML <div class="line"><div class="bar" style="width: 90%;"></div></div></li>
-                        <li>CSS <div class="line"><div class="bar" style="width: 85%;"></div></div></li>
-                    </ul>
-                </div>
-                <div class="reference">
-                    <h2>Reference Person</h2>
-                    <p>Mr. Hien Luong - Company</p>
-                    <p>Name: ______________</p>
-                    <p>Position: _____________</p>
-                    <p>Contact: _____________</p>
-                    <p>Mr. Khiet Luong - Company</p>
-                    <p>Name: ______________</p>
-                    <p>Position: _____________</p>
-                    <p>Contact: _____________</p>
-                </div>
-            </div>
-            <div class="right">
-                <h1>NGUYEN VAN A</h1>
-                <h2>Title: Developer</h2>
-                <div class="education">
-                    <h2>Education</h2>
-                    <p>2014-2016 Lorem ipsum dolor sit amet consectetur.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                </div>
-                <div class="experience">
-                    <h2>Experience</h2>
-                    <p>2014-2016 Lorem ipsum dolor sit amet consectetur.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                    <p>2013-2014 Lorem ipsum dolor sit amet consectetur.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                </div>
+            <h2>Skills</h2>
+            <div class="skills">
+                <ul>
+                    <li>
+                        <span>Photoshop</span>
+                        <div class="line">
+                            <div class="bar photoshop"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>JavaScript</span>
+                        <div class="line">
+                            <div class="bar javascript"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>HTML</span>
+                        <div class="line">
+                            <div class="bar html"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>CSS</span>
+                        <div class="line">
+                            <div class="bar css"></div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
