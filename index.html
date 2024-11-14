@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            width: 70%;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .left, .right {
+            padding: 20px;
+        }
+        .left {
+            width: 40%;
+            background-color: #333;
+            color: white;
+        }
+        .right {
+            width: 60%;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        p, ul, li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .about, .contact, .skills, .reference {
+            margin-bottom: 20px;
+        }
+        .skills ul {
+            list-style: none;
+        }
+        .skills li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        .experience, .education {
+            margin-bottom: 20px;
+        }
+        .line {
+            background-color: #555;
+            height: 5px;
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .bar {
+            background-color: #eee;
+            border-radius: 5px;
+            width: 70%;
+            height: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="about">
+                <h1>About Me</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est itaque dicta dolor quam aliquam optio illo, quib.</p>
+            </div>
+            <div class="contact">
+                <h2>Contact Us</h2>
+                <p>Address: Lorem ipsum dolor sit amet.</p>
+                <p>Phone: 0123456789</p>
+                <p>Email: demo@gmail.com</p>
+            </div>
+            <div class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Photoshop <div class="line"><div class="bar" style="width: 80%;"></div></div></li>
+                    <li>JavaScript <div class="line"><div class="bar" style="width: 70%;"></div></div></li>
+                    <li>HTML <div class="line"><div class="bar" style="width: 90%;"></div></div></li>
+                    <li>CSS <div class="line"><div class="bar" style="width: 85%;"></div></div></li>
+                </ul>
+            </div>
+            <div class="reference">
+                <h2>Reference Person</h2>
+                <p>Mr. Hien Luong - Company</p>
+                <p>Name: ______________</p>
+                <p>Position: _____________</p>
+                <p>Contact: _____________</p>
+                <p>Mr. Khiet Luong - Company</p>
+                <p>Name: ______________</p>
+                <p>Position: _____________</p>
+                <p>Contact: _____________</p>
+            </div>
+        </div>
+        <div class="right">
+            <h1>NGUYEN VAN A</h1>
+            <h2>Title: Developer</h2>
+            <div class="education">
+                <h2>Education</h2>
+                <p>2014-2016 Lorem ipsum dolor sit amet consectetur.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+            </div>
+            <div class="experience">
+                <h2>Experience</h2>
+                <p>2014-2016 Lorem ipsum dolor sit amet consectetur.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <p>2013-2014 Lorem ipsum dolor sit amet consectetur.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
