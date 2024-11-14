@@ -59,26 +59,27 @@
         .left ul {
             list-style-type: none;
             padding-left: 0;
-        }
-        .skills ul {
             width: 100%;
         }
         .skills li {
+            display: flex;
+            flex-direction: column;
             margin-bottom: 15px;
-            color: white;
+        }
+        .skills li span {
+            margin-bottom: 5px;
             font-size: 0.9em;
         }
         .line {
             background-color: #555;
-            height: 10px;
+            height: 8px;
             width: 100%;
             border-radius: 5px;
-            margin-top: 5px;
             overflow: hidden;
         }
         .bar {
             background-color: #eee;
-            height: 100%;
+            height: 8px;
             border-radius: 5px;
         }
         .photoshop { width: 80%; }
@@ -141,17 +142,29 @@
             <div class="section">
                 <div class="section-title">SKILLS</div>
                 <ul class="skills">
-                    <li>Photoshop
-                        <div class="line"><div class="bar photoshop"></div></div>
+                    <li>
+                        <span>Photoshop</span>
+                        <div class="line">
+                            <div class="bar photoshop"></div>
+                        </div>
                     </li>
-                    <li>JavaScript
-                        <div class="line"><div class="bar javascript"></div></div>
+                    <li>
+                        <span>JavaScript</span>
+                        <div class="line">
+                            <div class="bar javascript"></div>
+                        </div>
                     </li>
-                    <li>HTML
-                        <div class="line"><div class="bar html"></div></div>
+                    <li>
+                        <span>HTML</span>
+                        <div class="line">
+                            <div class="bar html"></div>
+                        </div>
                     </li>
-                    <li>CSS
-                        <div class="line"><div class="bar css"></div></div>
+                    <li>
+                        <span>CSS</span>
+                        <div class="line">
+                            <div class="bar css"></div>
+                        </div>
                     </li>
                 </ul>
             </div>
